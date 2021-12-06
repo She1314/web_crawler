@@ -5,9 +5,9 @@
 # @Site : 
 # @File : 链家网爬取.py
 # @Software: PyCharm
-from requests_html import HTMLSession
-import aiohttp
 import asyncio
+
+import aiohttp
 from lxml import etree
 
 header = {
@@ -43,7 +43,7 @@ async def info_html(url):
 
 tasks = []
 home_url = 'https://sh.lianjia.com/ershoufang/pg%s/'
-for i in range(1, 3):
+for i in range(1, 5):
     continue_url = info_html(url=home_url % i)
     task = asyncio.ensure_future(coro_or_future=continue_url)
     tasks.append(task)
