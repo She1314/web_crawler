@@ -5,3 +5,6 @@
 # @Site : 
 # @File : __init__.py.py
 # @Software: PyCharm
+a = [1, 2, 3,4 ]
+b = [2, 3, 4, 5, 6]
+print(list(zip(a, b)))
